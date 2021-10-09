@@ -1,0 +1,284 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Arial";
+  color: #000000;
+ 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial";
+}
+
+/* BOTON PARA MOVERSE HACIA ARRIBA */
+.back-to-top {                   /*POSICION BOTON SUBIR*/
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #3914dd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}                                /*DENTRO DE BOTON */
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {               /*COLOR AL POSICIONARSE*/
+  background: #2ec0ec;
+  color: rgb(255, 255, 255);
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+.nav-menu a, .nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;                /*Color de letra barra de navegacion */
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+.nav-menu a i, .nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;                /*Color de iconos barra de navegacion*/
+}
+.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
+  color: rgb(197, 120, 31);
+}
+
+
+/*SECCIONES */
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: #e2f7ed;      /*Color de fondo de la opcion de programas*/
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #000000;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+.section-title p {
+  margin-bottom: 0;
+}
+
+/* INFORMACION PERSONAL*/
+.GENERAL .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #235294;
+}
+.GENERAL .content ul {
+  list-style: none;
+  padding: 0;
+}
+.GENERAL .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.GENERAL .content ul strong {
+  margin-right: 10px;
+}
+
+
+/* PROGRAMAS Y LENGUAJES DE PROGRAMACION*/
+.Programas .Progreso {                 /*estilo barras*/
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+.Programas .Progreso .skill {             /*Color TEXTO PROGRAMAS*/
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+}
+.Programas .Progreso .skill .val {      /*ESTILO NUMERO PORCENTAJE*/
+  float: right;
+  font-style: normal;
+}
+.Programas .Progreso-bar-wrap {          /*COLOR BARRA VACIA*/
+  background: #dce0f8;
+  height: 10px;
+}
+.Programas .Progreso-bar {                /*COLOR LLENADO DE BARRA*/
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #408be0;
+}
+
+/* Estudios y experiencia laboral*/
+.ESTUDIOS .ESTUDIOS-title {        /*estilo TITULO*/
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+.ESTUDIOS .ESTUDIOS-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+.ESTUDIOS .ESTUDIOS-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+.ESTUDIOS .ESTUDIOS-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.ESTUDIOS .ESTUDIOS-item ul {
+  padding-left: 20px;
+}
+.ESTUDIOS .ESTUDIOS-item ul li {
+  padding-bottom: 10px;
+}
+.ESTUDIOS .ESTUDIOS-item:last-child {
+  padding-bottom: 0;
+}
+
+
+/* REFERENCIAS*/
+.REFERENCIAS .REFERENCIAS-title {        /*estilo TITULO*/
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+.REFERENCIAS .REFERENCIAS-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+.REFERENCIAS .REFERENCIAS-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.REFERENCIAS .REFERENCIAS-item ul {
+  padding-left: 20px;
+}
+.REFERENCIAS .REFERENCIAS-item ul li {
+  padding-bottom: 10px;
+}
+.REFERENCIAS .REFERENCIAS-item:last-child {
+  padding-bottom: 0;
+}
+
+
+
+
+
+
+/*Formaciones e intereses */
+.FORMACIONES .icon-box {           /*ESPACIADO ENTRE BOTONES*/
+  margin-bottom: 10px;
+}
+.FORMACIONES .icon {                 /*COLOR BOTON*/
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 50px;
+  background: #17978d;
+  border-radius: 20%;
+  transition: 0.2s;
+  border: 1px solid #0aefff;
+}
+.FORMACIONES .icon i {            /*COLOR ICONO DENTRO DE BOTON*/
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.FORMACIONES .title {             /*ESTILO DE TITULO HOBBIE*/
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.FORMACIONES .title a {
+  color: #343a40;           /*Color de LETRA TITULO*/     
+}
+
+
+.FORMACIONES .description {     /*ESTILO DE DESCRIPCION*/
+  margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
